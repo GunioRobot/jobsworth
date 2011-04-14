@@ -10,13 +10,12 @@ class UserTest < ActiveRecord::TestCase
 
 
   should validate_presence_of(:company)
-  should validate_presence_of(:password)
   should validate_presence_of(:username)
   should validate_presence_of(:name)
   should validate_presence_of(:date_format)
   should validate_presence_of(:time_format)
   
-  %w(%m/%d/%Y %d/%m/%Y %Y-%m-%d %H:%M %I:%M%p).each do |format|
+  %w(%m/%d/%Y %d/%m/%Y %Y-%m-%d).each do |format|
     should allow_value(format).for(:date_format)
   end
   %w(%H:%M %I:%M%p).each do |format|
@@ -101,14 +100,6 @@ class UserTest < ActiveRecord::TestCase
 
   def test_display_name
     assert_equal "Erlend Simonsen", @user.name
-  end
-
-  def test_login
-    assert_equal @user, @user.login(companies('cit'))
-    assert_nil   @user.login
-    assert_nil   @user.login('www')
-    assert_nil   User.new.login('cit')
-    assert_nil   users(:fudge).login('cit')
   end
 
   def test_can?
