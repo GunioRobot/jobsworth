@@ -7,11 +7,11 @@ class TranslateWidgets < ActiveRecord::Migration
         Localization.lang(w.user.locale || 'en_US')
         w.name = _(w.attributes['name'])
         w.save
-      end 
-      
+      end
+
     end
   end
-    
+
   def self.down
   end
 end

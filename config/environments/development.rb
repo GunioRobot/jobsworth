@@ -26,11 +26,11 @@ Jobsworth::Application.configure do
   :user_name      => 'username@host.com', #ex. intale.a@gmail.com
   :password       => 'password'
 }
-  
+
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
-  
-  config.after_initialize do 
+
+  config.after_initialize do
 #    Bullet.enable = true
 #    Bullet.alert = false
 #    Bullet.bullet_logger= true

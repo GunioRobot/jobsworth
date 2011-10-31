@@ -9,8 +9,8 @@ class DatetimeTest < ActionController::IntegrationTest
           visit ('/tasks/edit/'+@task.task_num.to_s)
           @local_datetime = @user.tz.utc_to_local(Time.now.utc)
         end
-         
-        
+
+
         context "and add comment with 'Time worked'" do
           setup do
             fill_in "comment", :with => "my new comment"
@@ -24,7 +24,7 @@ class DatetimeTest < ActionController::IntegrationTest
               assert_in_delta @local_datetime.hour.hours + @local_datetime.min.minutes, start_log_time.hour.hours + start_log_time.min.minutes, 2.minute
             end
            end
-          
+
         end
         context "with existed todo item" do
           setup do
@@ -41,12 +41,12 @@ class DatetimeTest < ActionController::IntegrationTest
         end
     end
   end
-  context "A logged in user" do 
-    setup do 
+  context "A logged in user" do
+    setup do
       @user= login
       @user.option_tracktime=true
       @user.save!
-    end  
+    end
     context "from Russia(utc+4)" do
       setup do
         @user.time_zone= "Europe/Moscow"

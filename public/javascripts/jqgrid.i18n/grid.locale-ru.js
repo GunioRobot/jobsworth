@@ -77,7 +77,7 @@ $.jgrid = {
 	col : {
 	    caption: "Показать/скрыть столбцы",
 	    bSubmit: "Сохранить",
-	    bCancel: "Отмена"	
+	    bCancel: "Отмена"
 	},
 	errors : {
 		errcap : "Ошибка",

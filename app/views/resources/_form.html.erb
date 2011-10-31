@@ -9,7 +9,7 @@
   <label for="resource_customer"><%= _("Client") %></label>
   <%= f.hidden_field(:customer_id, :class => "auto_complete_id")  %>
   <%= text_field :resource_customer, :name, { :value => @resource.customer } %>
-  
+
   <br />
 
   <label for="resource_parent"><%= _("Parent resource") %></label>
@@ -31,7 +31,7 @@
     <legend><%= _("Attributes") %></legend>
     <div id="attributes">
       <% @resource.all_attributes.each do |ra| %>
-        <%= render(:partial => "attribute", :locals => { :attribute => ra }) %> 
+        <%= render(:partial => "attribute", :locals => { :attribute => ra }) %>
       <% end %>
     </div>
 

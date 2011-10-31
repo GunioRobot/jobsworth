@@ -3,7 +3,7 @@ class TimeParser
 
 
   ###
-  # Parses the date string at params[key_name] according to the 
+  # Parses the date string at params[key_name] according to the
   # current user's prefs. If no date is found, the current
   # date is returned.
   # The returned data will always be in UTC.
@@ -37,7 +37,7 @@ class TimeParser
           when _('d') then total += e.to_i * user.workday_duration
           when _('h') then total += e.to_i * 60
           when _('m') then total += e.to_i
-          else 
+          else
             miss = true
           end
         end
@@ -58,13 +58,13 @@ class TimeParser
             end
           end
         end
-        
+
         if eng_total > total
           total = eng_total
         end
-        
+
       end
-      
+
       if total == 0
         times = input.split(':')
         while time = times.shift
@@ -82,9 +82,9 @@ class TimeParser
       end
 
       total = total * 60 unless minutes
-      
+
     end
     total
   end
-  
+
 end

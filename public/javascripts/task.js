@@ -387,7 +387,7 @@ function remove_file_attachment(file_id, message) {
 
 function highlightWatchers() {
 	var comment_val = jQuery('#comment').val();
-	
+
   if (comment_val !== task_comment_empty) {
 	  if (comment_val == '') {
 	    jQuery('.watcher').removeClass('will_notify');
@@ -493,7 +493,7 @@ function bind_task_hide_until_callbacks(){
       if(jQuery(this).val().length>0) {
          jQuery('#snooze_until_date').show();
       }
-    }).datepicker({dateFormat: userDateFormat}); 
+    }).datepicker({dateFormat: userDateFormat});
 
     jQuery('#snooze_until_datepicker').click(function(){
         jQuery('#task_hide_until').datepicker('show');

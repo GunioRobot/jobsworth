@@ -1,8 +1,8 @@
 <div id="config-<%= @widget.dom_id %>" style="display:none;" class="widget-config">
 <%= form_tag({:controller => 'widgets', :action => 'update', :id => @widget },
              :id => "update_widget_#{@widget.id}", :remote => true) do  %>
-<label for="widget_name"><%= _("Title") %></label><%= text_field 'widget', 'name', {:size => 10} %> 
-<label for="widget_gadget_url"><%= _("Gadget HTML Code") %></label><%= text_field 'widget', 'gadget_url', {:size => 35} %> 
+<label for="widget_name"><%= _("Title") %></label><%= text_field 'widget', 'name', {:size => 10} %>
+<label for="widget_gadget_url"><%= _("Gadget HTML Code") %></label><%= text_field 'widget', 'gadget_url', {:size => 35} %>
 
 <%= submit_tag _("Save"), :class => "nolabel" %> <%= _'or'%> <%= link_to_function(_('Cancel'), "jQuery('#config-#{@widget.dom_id}').remove();") %>
 <% end %>

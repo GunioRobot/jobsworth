@@ -2,7 +2,7 @@ require "test_helper"
 
 class ResourceTypeTest < ActiveRecord::TestCase
   fixtures :companies
-  
+
   def setup
     @rt = Company.find(:first).resource_types.build
   end
@@ -41,7 +41,7 @@ class ResourceTypeTest < ActiveRecord::TestCase
 
   def test_attributes_sets_position
     a1, a2 = two_attributes
-    
+
     params = {
       a1.id => { :name => "a1a", :position => 1 },
       a2.id => { :name => "a2a", :position => 0 }
@@ -52,7 +52,7 @@ class ResourceTypeTest < ActiveRecord::TestCase
     assert_equal 0, a2.position
   end
 
-  private 
+  private
 
   def two_attributes
     @rt.save

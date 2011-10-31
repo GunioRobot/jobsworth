@@ -35,7 +35,7 @@ class ReportsControllerTest < ActionController::TestCase
 
     assert_report_works(WorklogReport::PIVOT,
                         :range => 7,
-                        :start_date => start_date, 
+                        :start_date => start_date,
                         :end_date => end_date)
   end
  end

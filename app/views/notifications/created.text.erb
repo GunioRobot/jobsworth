@@ -18,7 +18,7 @@ unless @task.due_at.nil?
   end
   -%>
   Due:          <%= tz.utc_to_local(@task.due_at).strftime("%A, %d %B %Y") %>
-<% end 
+<% end
 assigned_users = @task.task_owners
 -%>
   Assigned To:  <%= assigned_users.collect{|u| u.user.name}.join(', ') unless assigned_users.empty? %><%= "No one" if assigned_users.empty? %>

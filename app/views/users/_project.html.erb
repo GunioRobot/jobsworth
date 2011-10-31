@@ -21,8 +21,8 @@
       <%= image_tag("user_suit.png", :title => "Can't remove the <b>project creator</b>!".html_safe, :class => "tooltip") if perm.can? p %>
       <%= image_tag("delete.png", :title => _("Can't remove the <b>project creator</b>!").html_safe, :class => "tooltip") unless perm.can? p %>
     </td>
-  <% end 
-  
+  <% end
+
 
 #-----------------
 # user has access
@@ -46,8 +46,8 @@ elsif user_granted %>
                success: function(response){ jQuery('#permission_list').html(response); }
                })" unless perm.can?(p) -%>
     </td>
-  <% end 
-  
+  <% end
+
 #-----------------
 # user has no access
 #-----------------

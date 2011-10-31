@@ -12,10 +12,10 @@
 
   <label for="page_name"><%=_ 'Name' %></label>
   <%= text_field 'page', 'name'  %>
-  
+
   <label for="page_snippet"><%= _('Snippet (visible to all users)') %></label>
   <%= f.check_box :snippet%>
-  
+
   <br/><br/>
 
   <textarea class="tinymce" name="page[body]" id="page_body" rows="20" style="width:100%;"><%= @page.body %></textarea><br/>

@@ -66,7 +66,7 @@ class OrganizationalUnitsController < ApplicationController
   end
 
   def send_to_customer_page
-    redirect_to(:id => @customer.id, :action => "edit", 
+    redirect_to(:id => @customer.id, :action => "edit",
                 :controller => "clients", :anchor => "organizational_units")
   end
 end

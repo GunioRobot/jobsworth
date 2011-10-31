@@ -2,7 +2,7 @@ require 'test_helper'
 
 class OrganizationalUnitsControllerTest < ActionController::TestCase
   fixtures :users, :companies, :customers
-  
+
   signed_in_admin_context do
 
   should "render :success on /new" do

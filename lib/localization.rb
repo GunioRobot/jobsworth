@@ -10,7 +10,7 @@ module Localization
   end
 
   def self._(string_to_localize, *args)
-    translated = @@l10s[@@lang][string_to_localize] 
+    translated = @@l10s[@@lang][string_to_localize]
     if translated.nil?
       l = nil
       l = Locale.where("locales.locale = ? AND locales.key = ?", @@lang, string_to_localize).first rescue nil
@@ -26,15 +26,15 @@ module Localization
       elsif @@lang != :default
         translated = [l.singular, l.plural] if l.plural
         translated ||= l.singular
-      else 
+      else
         translated = string_to_localize
-      end 
-    end 
+      end
+    end
     @@l10s[@@lang][string_to_localize] = translated
     return translated.call(*args).to_s if translated.is_a? Proc
     translated =
       translated[args[0]>1 ? 1 : 0] if translated.is_a?(Array)
-    sprintf translated, *args rescue sprintf string_to_localize, *args 
+    sprintf translated, *args rescue sprintf string_to_localize, *args
   end
 
   def self.define(lang = :default)
@@ -52,11 +52,11 @@ module Localization
     @@l10s[@@lang] ||= { }
     @@lang
   end
-  
+
   def self.l10s
     @@l10s
-  end 
-  
+  end
+
 end
 
 class Date

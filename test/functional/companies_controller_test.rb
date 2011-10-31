@@ -10,7 +10,7 @@ class CompaniesControllerTest < ActionController::TestCase
     @request.session[:user_id] = @user.id
     @user.company.create_default_statuses
   end
-  
+
   test "/edit should render :success" do
     get :edit, :id => @user.company.id
     assert_response :success

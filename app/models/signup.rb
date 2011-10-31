@@ -21,7 +21,7 @@ class Signup < ActionMailer::Base
          :to => user.email,
          :date => sent_at,
          :reply_to => created_by.email
-        )    
+        )
   end
 
   def mass_email(user, sent_at = Time.now)

@@ -291,7 +291,7 @@ div.page_header span#recent_filters_button {
 .task.unread .task-name a, .task.unread, .task.unassigned {
   font-weight: bold;
 }
-  
+
 .unread_icon {
   display: block;
   width: 12px;
@@ -363,7 +363,7 @@ img {
   border:  0;
 }
 
-input.checkbox { 
+input.checkbox {
   vertical-align: middle;
   margin-top:2px;
 }
@@ -531,7 +531,7 @@ textarea#task_name {
 }
 
 
-#task_sidebar textarea#task_notify_emails, #task_sidebar select { margin-left: 0px; } 
+#task_sidebar textarea#task_notify_emails, #task_sidebar select { margin-left: 0px; }
 
 #task_attr label,
 #task_notify label,
@@ -539,8 +539,8 @@ textarea#task_name {
 #task_attachments label,
 #task_project_selection label,
 #task_resources label,
-#task_information label, 
-#reports_filter label, 
+#task_information label,
+#reports_filter label,
 #reports_config label,
 #taskform label {
 	width: 105px;
@@ -658,7 +658,7 @@ fieldset input.file {
   margin-bottom: 0;
 }
 
-fieldset div.buttons { 
+fieldset div.buttons {
   padding-top: 0.5em;
 }
 
@@ -666,7 +666,7 @@ input.nolabel:hover {
   background-color: #ff9900;
 }
 
-input.nolabel { 
+input.nolabel {
   background-color: #ffd597;
 
   border-color:#ff9900;
@@ -941,7 +941,7 @@ pre.auto_generated {
   list-style: square;
 }
 
-#main-table { 
+#main-table {
   margin-bottom: 30px;
   background-color: white;
   width: 100%;
@@ -1324,7 +1324,7 @@ a.description {
     text-decoration: none;
 }
 
-#tabmenu ul { 
+#tabmenu ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1333,7 +1333,7 @@ a.description {
 }
 
 
-#tabmenu input { 
+#tabmenu input {
   margin: 0;
   padding: 0;
   height: 11px;
@@ -1357,11 +1357,11 @@ a.description {
   float: left;
 }
 
-#tabmenu #search_menu { 
+#tabmenu #search_menu {
   float: right;
 }
 
-#tabmenu li.right { 
+#tabmenu li.right {
   float: right;
 }
 
@@ -2589,7 +2589,7 @@ fieldset.basic .actions label {
 }
 
 /* Menus
- ------------------------------------------ */ 
+ ------------------------------------------ */
 #content ul.querymenu {
     margin: 0;
     padding: 0;

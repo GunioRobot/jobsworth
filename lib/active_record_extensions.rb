@@ -6,7 +6,7 @@ class ActiveRecord::Base
   # must have a method named company which will be used to find any
   # new associated objects.
   #
-  # The params should be a hash of ids of the object to be added. 
+  # The params should be a hash of ids of the object to be added.
   # Any existing members of the association without an id in params
   # will be removed from the association.
   def self.adds_and_removes_using_params(association)
@@ -26,7 +26,7 @@ class ActiveRecord::Base
     association_objects = self.send(association_name)
     klass = association_objects.build.class
     updated = []
-    
+
     params.each do |id, ignored_params|
       existing = association_objects.detect { |o| o.id == id.to_i }
       if existing.nil?
@@ -40,6 +40,6 @@ class ActiveRecord::Base
     missing = association_objects - updated
     association_objects.delete(missing)
   end
-  
+
 
 end

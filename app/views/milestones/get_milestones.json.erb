@@ -1,4 +1,4 @@
-<% @milestones = @milestones.map { |m| 
+<% @milestones = @milestones.map { |m|
   { :text => m.name.gsub(/"/,'\"'),
     :value => m.id.to_s,
     :date=> formatted_date_for_current_user(m.due_at) || _("Not set")

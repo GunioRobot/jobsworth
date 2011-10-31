@@ -7,7 +7,7 @@ signed_in_admin_context do
   def setup
     @request.with_subdomain('cit')
   end
-  
+
   should "render :success on /index" do
     get :index
     assert_response :success
@@ -16,9 +16,9 @@ signed_in_admin_context do
   should "create and redirect on /create " do
     old_count = Property.count
 
-    post(:create, 
+    post(:create,
          :property => { :name => "Test" },
-         :new_property_values => [ 
+         :new_property_values => [
                                   { :value => 'val1' },
                                   { :value => 'val2' },
                                  ])
@@ -39,7 +39,7 @@ signed_in_admin_context do
     pv = property.property_values.create(:value => 'val_old')
     old_count = Property.count
 
-    post(:update, 
+    post(:update,
          :id => property.id,
          :property => { :name => "Test" },
          :property_values => { pv.id.to_s => { :value => "val_old2" } },

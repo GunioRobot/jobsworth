@@ -25,7 +25,7 @@ class Milestone < ActiveRecord::Base
   def complete?
     (self.completed_tasks == self.total_tasks) || (!self.completed_at.nil?)
   end
-  
+
   def escape_twice(attr)
     h(String.new(h(attr)))
   end

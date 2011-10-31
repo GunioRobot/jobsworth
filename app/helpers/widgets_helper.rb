@@ -5,5 +5,5 @@ module WidgetsHelper
   def schedule_header(i)
     SCHEDULE_HEADERS[i]
   end
-  
+
 end

@@ -506,7 +506,7 @@ Localization.define('de_DE') do |l|
   l.store "Create New Folder", "Neuen Ordner anlegen" # Tim Zech
   l.store "Delete <b>%s</b>.", "Lösche <b>%s</b>." # Tim Zech
   l.store "Delete Transcript", "Mitschrift löschen?" # Tim Zech
-  l.store "Hide Dependencies", "Abhängigkeiten verstecken" # Manuel Schaeidt 
+  l.store "Hide Dependencies", "Abhängigkeiten verstecken" # Manuel Schaeidt
   l.store "No file selected.", "Keine Datei ausgewählt" # Tim Zech
   l.store "Really delete %s?", "%s wirklich löschen?" # Tim Zech
   l.store "Really revert %s?", "%s wirklich zurückversetzen?"
@@ -568,7 +568,7 @@ Localization.define('de_DE') do |l|
   l.store "Download Database Dump", "Datenbankabbild herunterladen" # Günther Grill
   l.store "Edit project <b>%s</b>", "Projekt <b>%s</b> bearbeiten"
   l.store "Floating Messaging Bar", "Nachrichtenleiste andocken" # Uwe Kelderbacher
-  l.store "Hide Task Dependencies", "Aufgabenabhängigkeiten verstecken" # Manuel Schaeidt 
+  l.store "Hide Task Dependencies", "Aufgabenabhängigkeiten verstecken" # Manuel Schaeidt
   l.store "View '%s' was deleted.", "Ansicht '%s' wurde gelöscht."
   l.store "invite some co-workers", "Mitarbeiter einladen" # Tim Zech
   l.store ", this topic is locked.", ", dieser Beitrag ist gesperrt." # Muckel

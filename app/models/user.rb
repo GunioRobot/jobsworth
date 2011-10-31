@@ -306,7 +306,7 @@ class User < ActiveRecord::Base
   end
 
 private
-  
+
   def reject_destroy_if_exist
     [:work_logs, :topics, :posts].each do |association|
       errors.add(:base, "The user has the #{association.to_s.humanize}, please remove them first or deactivate user.") unless eval("#{association}.count").zero?

@@ -55,7 +55,7 @@ class ObjectFilterTest < ActiveRecord::TestCase
     o.name = "odd one out"
     o.prop = "odd one out"
     objects << o
-    
+
     return objects
   end
 

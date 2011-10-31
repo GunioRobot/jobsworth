@@ -56,7 +56,7 @@ class TodosController < ApplicationController
   def list_clone
     @task = Task.new
     Template.find(params[:id]).clone_todos.collect{|t| @task.todos.build(t.attributes) }
- 
+
     render :partial => "todos_clone"
   end
 

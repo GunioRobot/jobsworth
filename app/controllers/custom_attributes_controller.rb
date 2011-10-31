@@ -15,7 +15,7 @@ class CustomAttributesController < ApplicationController
   end
 
   def update
-    update_existing_attributes(params) 
+    update_existing_attributes(params)
     create_new_attributes(params) if params[:new_custom_attributes]
 
     flash[:notice] = _("Custom attributes updated")
@@ -32,7 +32,7 @@ class CustomAttributesController < ApplicationController
       attribute = current_user.company.custom_attributes.find(params[:id])
     end
 
-    render(:partial => "choice", :locals => { 
+    render(:partial => "choice", :locals => {
              :attribute => attribute, :choice => CustomAttributeChoice.new })
   end
 

@@ -8,7 +8,7 @@ namespace :locale do
     Localization.load
     Localization.locales.each do |locale|
       l = locale[1]
-      
+
       (Localization.l10s[l] || { }).keys.each do |k|
         v = Localization.l10s[l][k]
         n = Locale.where("locales.locale = ? AND locales.key = ?", locale[1], k).first || Locale.new
@@ -17,13 +17,13 @@ namespace :locale do
         if v.is_a? Array
           n.singular = v[0]
           n.plural = v[1]
-        else 
+        else
           n.singular = v
         end
         n.save
       end
     end
-  end 
+  end
 
   desc "Dump translations from database"
   task :dump => [:environment] do
@@ -37,21 +37,21 @@ namespace :locale do
           f.print "  l.store \"#{k.key.gsub(/\\/, "\\\\\\").gsub(/"/, "\\\"")}\", "
           if k.plural
             f.print "[\"#{k.singular.gsub(/\\/, "\\\\\\").gsub(/"/, "\\\"")}\", \"#{k.plural.gsub(/\\/, "\\\\\\").gsub(/"/, "\\\"")}\"]"
-          else 
+          else
             f.print "\"#{k.singular.gsub(/\\/, "\\\\\\").gsub(/"/, "\\\"")}\""
           end
-          
+
           f.print " # #{k.user.name}" if k.user rescue nil
           f.puts
-          
-        end 
+
+        end
 
         f.puts "end"
-        
-      end 
+
+      end
     end
-  end 
-  
-  
-end 
+  end
+
+
+end
 

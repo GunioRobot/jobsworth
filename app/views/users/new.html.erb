@@ -1,4 +1,4 @@
-<% 
+<%
   @user_ids = []
   @current_user.company.projects.each do |p|
     @user_ids << p.users.collect{ |pu| pu.id }

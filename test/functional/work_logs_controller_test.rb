@@ -2,7 +2,7 @@ require "test_helper"
 
 class WorkLogsControllerTest < ActionController::TestCase
   fixtures(:projects)
-  
+
   signed_in_admin_context do
     setup do
       project = projects(:test_project)

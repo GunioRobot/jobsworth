@@ -12,7 +12,7 @@ class Post < ActiveRecord::Base
          ).joins('
            inner join topics on posts.topic_id = topics.id inner join forums on topics.forum_id = forums.id'
          ).order('posts.created_at desc')
-       
+
   format_attribute :body
 
   before_create { |r| r.forum_id = r.topic.forum_id }
@@ -57,7 +57,7 @@ class Post < ActiveRecord::Base
   def started_at
     self.created_at
   end
-  
+
 end
 
 

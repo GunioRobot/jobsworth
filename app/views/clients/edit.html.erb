@@ -19,7 +19,7 @@
 			<label>&nbsp;</label>
 			<%= submit_tag "Upload", :class => 'nolabel' %>
 		<% end %>
-		
+
 		<%= form_tag :action => 'update', :id => @customer do %>
 		<p><label for="customer_css"><%=_ 'Client CSS' %></label><%= text_area 'customer', 'css', :id => "customer_css" %></p>
 		<%= submit_tag _("Save"), :class => "nolabel" %>
@@ -32,7 +32,7 @@
 <fieldset id="users">
 	<legend><%= _"Users" %></legend>
 	<%= create_users_link(@customer) %>
-	
+
 	<% for @user in @customer.users %>
 		<%= render(:partial => "/users/user", :locals => { :show_avatar => false }) %>
 	<% end %>
@@ -41,7 +41,7 @@
 <fieldset class="basic" id="organizational_units">
 	<legend><%= _"Organization Units" %></legend>
 	<%= link_to(_("Create Organizational Unit"), new_organizational_unit_path(:customer_id => @customer.id)) %>
-	
+
 	<% for @org_unit in @customer.organizational_units.active %>
 		<%= render(:partial => "/organizational_units/list_item") %>
 	<% end %>
@@ -54,7 +54,7 @@
     <ul>
       <% resources_without_parents(@customer.resources).each do |r| %>
         <%= render(:partial => "/resources/resource", :locals => { :resource => r, :depth => 0 }) %>
-      <% end %> 
+      <% end %>
     </ul>
   </fieldset>
 <% end -%>
@@ -63,5 +63,5 @@
 
 <%= render :partial => "/pages/notes", :locals =>{ :notes=> @customer.notes} %>
 
-    
+
 

@@ -7,7 +7,7 @@
 
   <% resource.event_logs.each do |log| %>
     <%= history_date_if_needed(log) %>
-  
+
     <div class="hoverrow">
       <div class="avatar">
 	<%= avatar_for(log.user, 25) if log.user %>

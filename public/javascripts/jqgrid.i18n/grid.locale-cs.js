@@ -3,7 +3,7 @@
  * jqGrid Czech Translation
  * Pavel Jirak pavel.jirak@jipas.cz
  * doplnil Thomas Wagner xwagne01@stud.fit.vutbr.cz
- * http://trirand.com/blog/ 
+ * http://trirand.com/blog/
  * Dual licensed under the MIT and GPL licenses:
  * http://www.opensource.org/licenses/mit-license.php
  * http://www.gnu.org/licenses/gpl.html
@@ -78,7 +78,7 @@ $.jgrid = {
 	col : {
 		caption: "Zobrazit/Skrýt sloupce",
 		bSubmit: "Uložit",
-		bCancel: "Storno"	
+		bCancel: "Storno"
 	},
 	errors : {
 		errcap : "Chyba",

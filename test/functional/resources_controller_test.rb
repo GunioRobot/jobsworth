@@ -46,7 +46,7 @@ class ResourcesControllerTest < ActionController::TestCase
 
     post :destroy, @resource.id
     assert_redirected_to(end_page)
-  end 
+  end
 
   test "/new should render :success" do
     get :new

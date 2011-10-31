@@ -17,7 +17,7 @@ $.jgrid = {
 	search : {
 	    caption: "Arama...",
 	    Find: "Bul",
-	    Reset: "Temizle",	    
+	    Reset: "Temizle",
 	    odata : ['eşit', 'eşit değil', 'daha az', 'daha az veya eşit', 'daha fazla', 'daha fazla veya eşit', 'ile başlayan', 'ile başlamayan', 'içinde', 'içinde değil', 'ile biten', 'ile bitmeyen', 'içeren', 'içermeyen'],
 	    groupOps: [	{ op: "VE", text: "tüm" },	{ op: "VEYA",  text: "herhangi" }	],
 		matchText: " uyan",
@@ -76,7 +76,7 @@ $.jgrid = {
 	col : {
 	    caption: "Sütunları göster/gizle",
 	    bSubmit: "Gönder",
-	    bCancel: "İptal"	
+	    bCancel: "İptal"
 	},
 	errors : {
 		errcap : "Hata",

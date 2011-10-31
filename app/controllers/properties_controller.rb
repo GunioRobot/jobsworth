@@ -56,7 +56,7 @@ class PropertiesController < ApplicationController
     update_existing_property_values(@property, params)
     @property.property_values.build(params[:new_property_values]) if params[:new_property_values]
 
-    saved = @property.update_attributes(params[:property]) 
+    saved = @property.update_attributes(params[:property])
     # force company in case somebody passes in company_id param
     @property.company = current_user.company
     saved &&= @property.save

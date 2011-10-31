@@ -10,7 +10,7 @@ class WorkControllerTest < ActionController::TestCase
 
     should "render start" do
       get :start, :task_num => @task.task_num
-      
+
       sheet = assigns("current_sheet")
       assert_equal @task, sheet.task
       assert_equal @user, sheet.user
@@ -24,7 +24,7 @@ class WorkControllerTest < ActionController::TestCase
         @sheet.created_at = 30.minutes.ago
         @sheet.save!
       end
-      
+
       should "render stop" do
         get :stop
         assert @user.sheets.empty?

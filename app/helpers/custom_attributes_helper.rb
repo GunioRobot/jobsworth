@@ -15,8 +15,8 @@ module CustomAttributesHelper
   ###
   def prefix(attribute)
      prefix = "custom_attributes"
-     prefix = "new_#{ prefix }" if attribute.nil? or attribute.new_record? 
-    
+     prefix = "new_#{ prefix }" if attribute.nil? or attribute.new_record?
+
     return prefix
   end
 
@@ -32,7 +32,7 @@ module CustomAttributesHelper
   end
 
   ###
-  # Returns a link that will add a new choice to attribute and display 
+  # Returns a link that will add a new choice to attribute and display
   # it in the current page.
   ###
   def add_choice_link(attribute)
@@ -46,9 +46,9 @@ module CustomAttributesHelper
   ###
   def sortable_for_choices(attribute)
     div = "##{ dom_id(attribute) } .choices"
-    sortable_element(div, 
-                     :handle => ".handle.custom_attribute_choice", 
+    sortable_element(div,
+                     :handle => ".handle.custom_attribute_choice",
                      :onUpdate => "function() { updatePositionFields('#{ div }') }")
-    
+
   end
 end

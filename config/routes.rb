@@ -70,7 +70,7 @@ Jobsworth::Application.routes.draw do
     match :toggle_done, :on => :member
   end
 
-  resources :work_logs do 
+  resources :work_logs do
     match :update_work_log, :on=> :member
   end
 

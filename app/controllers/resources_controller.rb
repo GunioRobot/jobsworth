@@ -12,7 +12,7 @@ class ResourcesController < ApplicationController
       redirect_to resources_path
     else
       @resources = current_user.company.resources
-      @resources = ObjectFilter.new.filter(@resources, 
+      @resources = ObjectFilter.new.filter(@resources,
                                            session[:resource_filters])
 
       respond_to do |format|
@@ -67,7 +67,7 @@ class ResourcesController < ApplicationController
     @resource.attributes = params[:resource]
     @resource.company = current_user.company
     log = log_resource_changes(@resource)
-    
+
     respond_to do |format|
       if @resource.save
         # BW: not sure why these aren't getting updated automatically
@@ -101,7 +101,7 @@ class ResourcesController < ApplicationController
     type = current_user.company.resource_types.find(params[:type_id])
     rtas = type.resource_type_attributes
 
-    attributes = rtas.map do |rta| 
+    attributes = rtas.map do |rta|
       attr = ResourceAttribute.new
       attr.resource_type_attribute = rta
       attr
@@ -114,7 +114,7 @@ class ResourcesController < ApplicationController
   def show_password
     resource = current_user.company.resources.find(params[:id])
     @attribute = resource.resource_attributes.find(params[:attr_id])
-    
+
     body = "Requested password for resource "
     body += "#{ resource_path(resource) } - #{ resource.name }"
 

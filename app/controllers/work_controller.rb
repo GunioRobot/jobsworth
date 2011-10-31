@@ -1,7 +1,7 @@
 # encoding: UTF-8
 class WorkController < ApplicationController
   before_filter :access_to_work
-  
+
   # Starts tracking time on the given task
   def start
     task = Task.accessed_by(current_user).find_by_task_num(params[:task_num])
@@ -69,7 +69,7 @@ class WorkController < ApplicationController
       format.html { redirect_from_last }
     end
   end
-  
+
   private
   def access_to_work
     unless current_user.option_tracktime.to_i == 1

@@ -3,7 +3,7 @@
  * jqGrid German Translation
  * Version 1.0.0 (developed for jQuery Grid 3.3.1)
  * Olaf Klöppel opensource@blue-hit.de
- * http://blue-hit.de/ 
+ * http://blue-hit.de/
  * Dual licensed under the MIT and GPL licenses:
  * http://www.opensource.org/licenses/mit-license.php
  * http://www.gnu.org/licenses/gpl.html
@@ -78,7 +78,7 @@ $.jgrid = {
 	col : {
 		caption: "Spalten anzeigen/verbergen",
 		bSubmit: "Speichern",
-		bCancel: "Abbrechen"	
+		bCancel: "Abbrechen"
 	},
 	errors : {
 		errcap : "Fehler",

@@ -1,7 +1,7 @@
 class ChangeDurationToMinutes < ActiveRecord::Migration
   def self.up
     @tasks = Task.all
-    @tasks.each { |t| 
+    @tasks.each { |t|
       t.duration = t.duration * 60
       t.save
     }
@@ -10,7 +10,7 @@ class ChangeDurationToMinutes < ActiveRecord::Migration
 
   def self.down
     @tasks = Task.all
-    @tasks.each { |t| 
+    @tasks.each { |t|
       t.duration = t.duration / 60
       t.save
     }

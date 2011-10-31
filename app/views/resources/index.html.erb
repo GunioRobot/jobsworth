@@ -26,6 +26,6 @@
   <ul>
     <% resources_without_parents(@resources).each do |r| %>
     <%= render(:partial => "resource", :locals => { :resource => r, :depth => 0 }) %>
-    <% end %> 
+    <% end %>
   </ul>
 </div>

@@ -20,8 +20,8 @@ module ResourcesHelper
       value = _("User")
     end
 
-    res = text_field_tag("#{ name_prefix }[value]", value, 
-                         :id => field_id, :class => "value", 
+    res = text_field_tag("#{ name_prefix }[value]", value,
+                         :id => field_id, :class => "value",
                          :size => type.default_field_length)
 
     if type.is_password?
@@ -32,11 +32,11 @@ module ResourcesHelper
       add_style = show_remove_link ? "display: none" : ""
       remove_style = show_remove_link ? "" : "display: none;"
 
-      res += link_to_function(_("Add another"), "addAttribute(this)", 
-                              :class => "add_attribute", 
+      res += link_to_function(_("Add another"), "addAttribute(this)",
+                              :class => "add_attribute",
                               :style => add_style)
-      res += link_to_function(_("Remove"), "removeAttribute(this)", 
-                              :class => "remove_attribute", 
+      res += link_to_function(_("Remove"), "removeAttribute(this)",
+                              :class => "remove_attribute",
                               :style => remove_style)
     end
 
@@ -47,9 +47,9 @@ module ResourcesHelper
     res = ""
     if attribute.new_record? or attribute.password.blank?
       res = text_field_tag("#{ name_prefix }[password]", "Password",
-                           :id => field_id, :class => "password", 
+                           :id => field_id, :class => "password",
                            :size => type.default_field_length)
-    else 
+    else
       res = "<div class=\"password\"></div>"
       url = show_password_resource_path(@resource, :attr_id => attribute.id)
       res += link_to_function(_("Show Password"), "showPassword(this, '#{ url }')")
@@ -62,7 +62,7 @@ module ResourcesHelper
   # Returns only resources with no parent resource.
   ###
   def resources_without_parents(resources)
-    resources.select do |r| 
+    resources.select do |r|
       r.parent.nil? or !resources.include?(r.parent)
     end
   end
@@ -78,7 +78,7 @@ module ResourcesHelper
   # Returns the html to use to filter by resource types.
   ###
   def resource_type_filter
-    return filter_for(:resource_type_id, 
+    return filter_for(:resource_type_id,
                       objects_to_names_and_ids(current_user.company.resource_types),
                       session[:resource_filters], _("Resource Type"))
   end
@@ -99,7 +99,7 @@ module ResourcesHelper
   # If this is just the same as the last used date, returns nil.
   ###
   def history_date_if_needed(log)
-    date = tz.utc_to_local(log.updated_at).strftime("%A, %d %B %Y") 
+    date = tz.utc_to_local(log.updated_at).strftime("%A, %d %B %Y")
     if date != @last_date
       res = content_tag(:div, date, :class => "log_header")
       @last_date = date

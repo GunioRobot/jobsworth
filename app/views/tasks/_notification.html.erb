@@ -10,7 +10,7 @@
 
   <label>
     <%= unread_toggle_for_task_and_user(@task, user) %>
-    
+
     <%
     content = content_tag(:span, "*", :class => "icon assigned")
 
@@ -18,7 +18,7 @@
       content = link_to_function(content, "toggleTaskIcon(this)")
     end
 	-%>
-	
+
     <%= content %>
   </label>
 

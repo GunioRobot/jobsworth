@@ -8,20 +8,20 @@
 	   purpose: this index file is tied to SQL_Export.php and is meant to export
 	   		an entire account from a ClockingIT database, version 0.99.3
 	*/
-	
+
 	/* Instructions
 		1. create a folder in your webserver (ex. dbDump)
 		2. copy this file and SQL_Export.php to that folder
 		3. modify the database connection information below to match your ClockingIT installation
 		4. Go to http://yoursite.com/yourfolder/index.php (ex. http://localhost/dbDump/index.php)
 	*/
-	
+
 	// set initial value for $COMPANYID
 	$COMPANYID = -1;
-	
+
 	// set the file to force a download of the sql file or display the output to the browser
 	$DOWNLOAD = 1; // set to zero to display to the screen
-	
+
 	// database connection information (password must be in plain text)
 	$server = "localhost:3306";	//Port is not really necessary
 	$username = "root";		//Username for MySQL server
@@ -49,9 +49,9 @@
 
 		$query = "SELECT company_id FROM users WHERE uuid = '{$uuid}'";
 		$result = mysql_query($query,$cnx) or die(mysql_error() . "<p>Query: $query</p>");
-		
+
 		$result_num_rows = mysql_num_rows($result);
-		
+
 		if($result_num_rows == 1) {  // only one result should be allowed
 			$COMPANYID = mysql_result($result,0);
 		} else {
@@ -65,7 +65,7 @@
 
 
 	// if the user requested a download
-	if($_REQUEST['uuid'] && $result_num_rows == 1) {	
+	if($_REQUEST['uuid'] && $result_num_rows == 1) {
 		// run the export
 		if($DOWNLOAD) {
 			//Run the export (force a file download)
@@ -76,7 +76,7 @@
 			force_download($sqlFile,"$filename");
 		} else {
 			//Run the export (to the browser)
-			echo '<pre>'.$e->export($COMPANYID).'</pre>';	
+			echo '<pre>'.$e->export($COMPANYID).'</pre>';
 		}
 	} else {
 		echo 'There was some information missing from your request to properly run the script.';
@@ -85,15 +85,15 @@
 	//Clean up the joint
 	mysql_close($e->cnx);
 	mysql_close($cnx);
-	
+
 //////////////////////////////////////////////////////////
 // functions to facilitate the forced download of the data
 function force_download ($data, $name) {
-    
+
 	// force values
 	$mimetype='';
 	$filesize=false;
-	
+
 	// File size not set?
     if ($filesize == false OR !is_numeric($filesize)) {
         $filesize = strlen($data);

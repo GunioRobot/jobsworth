@@ -50,8 +50,8 @@ class WikiPage < ActiveRecord::Base
 
   def revision(rev = 0)
     rev > 0 ? self.revisions[rev-1] : current_revision
-  end 
-    
+  end
+
 
   def to_html(rev = 0)
     if rev > 0
@@ -72,7 +72,7 @@ class WikiPage < ActiveRecord::Base
   def started_at
     self.created_at
   end
-  
+
 end
 
 

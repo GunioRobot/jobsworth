@@ -8,5 +8,5 @@ class RemoveRecentActivitiesFromWidgets < ActiveRecord::Migration
     # You have to configure many things to raise Recent Activities Data
     raise ActiveRecord::IrreversibleMigration, "Can't recover the #{_("Recent Activities")} widget"
   end
-  
+
 end

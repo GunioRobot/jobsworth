@@ -866,7 +866,7 @@ table.posts tr.spacer td {
  table.posts .editing td.author {
  background:#030;
  }
- 
+
  table.posts .editing td.author * { color:#ccc; }
  table.posts .editing td.body { }
  */

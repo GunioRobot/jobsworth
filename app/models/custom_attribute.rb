@@ -28,7 +28,7 @@ class CustomAttribute < ActiveRecord::Base
   end
 
   ###
-  # Updates the custom_choice_attributes association based on 
+  # Updates the custom_choice_attributes association based on
   # the given params.
   # Any choices not included in the params will be deleted.
   ###
@@ -57,7 +57,7 @@ class CustomAttribute < ActiveRecord::Base
   end
 
   ###
-  # Returns the preset choices for this custom attribute, 
+  # Returns the preset choices for this custom attribute,
   # one per line.
   ###
   def choices_as_text

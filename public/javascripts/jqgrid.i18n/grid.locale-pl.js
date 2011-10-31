@@ -77,7 +77,7 @@ $.jgrid = {
 	col : {
 	    caption: "Pokaż/Ukryj kolumny",
 	    bSubmit: "Zatwierdź",
-	    bCancel: "Anuluj"	
+	    bCancel: "Anuluj"
 	},
 	errors : {
 		errcap : "B\u0142ąd",
@@ -116,7 +116,7 @@ $.jgrid = {
 			    YearMonth: "F, Y"
 			},
 			reformatAfterEdit : false
-		},	
+		},
 		baseLinkUrl: '',
 		showAction: '',
 	    target: '',

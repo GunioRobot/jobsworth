@@ -7,11 +7,11 @@
   <tr>
     <td><%= link_to "[Admin]", :action => "index" %> | <%= link_to "[Stats]", :action => "stats" %></td>
   </tr>
-  
+
   <tr>
     <td> <%= link_to "[New]", :action => "new_news" %></td>
   </tr>
-  
+
   <% for news in @news %>
   <tr>
   <td><%= news.created_at.strftime("%H:%M %d/%m-%y") %><br/><%= news.body %><br/>
@@ -19,6 +19,6 @@
   </td>
   </tr>
   <% end %>
-  
+
 </table>
 

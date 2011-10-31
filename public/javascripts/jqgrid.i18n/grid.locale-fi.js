@@ -79,7 +79,7 @@ $.jgrid = {
 	col : {
 	    caption: "Nayta/Piilota sarakkeet",
 	    bSubmit: "OK",
-	    bCancel: "Peru"	
+	    bCancel: "Peru"
 	},
 	errors : {
 		errcap : "Virhe",

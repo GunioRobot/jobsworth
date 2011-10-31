@@ -21,7 +21,7 @@ jQuery(document).ready(function() {
     click on the menu item
   */
   jQuery('li.task_template a').click(create_task_from_template);
-  
+
 });
 
 /*

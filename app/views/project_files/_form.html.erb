@@ -11,7 +11,7 @@
 <label for="file_name"><%=_ 'Name' %></label><input type="text" name="file_names[]"/><br />
 <label for="file_file"><%=_ 'File', 1 %></label><input type="file" size="35" name="tmp_files[]"/>
 <div class="buttons"><small>
-  <%= link_to_function _("Upload more files"), 
+  <%= link_to_function _("Upload more files"),
       "jQuery('#upload_container').append('<label for=\"file_name\">#{_'Name'}</label><input type=\"text\" name=\"file_names[]\"/><br /><label for=\"file_file\">#{_ 'File', 1}</label><input type=\"file\" size=\"35\" name=\"tmp_files[]\"/><br />')"
   %>
 </small></div><br />

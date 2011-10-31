@@ -3,7 +3,7 @@ internal_customer:
   name: Internal
   contact_email: admin@clockingit.com
   contact_name: Erlend Simonsen
-  css: #menu {color: blue;} 
+  css: #menu {color: blue;}
 external_customer:
   company: cit
   name: External

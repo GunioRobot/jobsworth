@@ -75,7 +75,7 @@ $.jgrid = {
 	col : {
 	    caption: "نمايش/عدم نمايش ستون",
 	    bSubmit: "ثبت",
-	    bCancel: "انصراف"	
+	    bCancel: "انصراف"
 	},
 	errors : {
 		errcap : "خطا",

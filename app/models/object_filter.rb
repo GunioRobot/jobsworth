@@ -7,8 +7,8 @@ class ObjectFilter
   # those which return one of the given values for each
   # method given. The methods must be declared in the class in
   # a class variable called FILTERABLE.
-  # 
-  # For example, to only include objects that return "a", or "b" 
+  #
+  # For example, to only include objects that return "a", or "b"
   # from a method called "name", the filter_params should be:
   # { :name => [ "a", "b" ] }.
   #
@@ -20,12 +20,12 @@ class ObjectFilter
 
     klass = objects.first.class
     res = objects
-    
+
     filter_params.each do |meth, values|
       filterable = klass.const_get("FILTERABLE")
       next if !filterable.include?(meth.to_sym)
 
-      res = res.select do |o| 
+      res = res.select do |o|
         val = o.send(meth)
         # even int params get passed in as strings, so
         # try to_s too.

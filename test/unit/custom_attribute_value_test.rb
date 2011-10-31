@@ -5,7 +5,7 @@ class CustomAttributeValueTest < ActiveRecord::TestCase
 
   def setup
     @company = Company.find(:first)
-    
+
     args = { :attributable_type => "User", :display_name => "Test custom attr" }
     @attr = @company.custom_attributes.create(args)
     @user = users(:admin)
@@ -15,7 +15,7 @@ class CustomAttributeValueTest < ActiveRecord::TestCase
     @attr.max_length = 5
     @attr.save
 
-    cav = CustomAttributeValue.new(:attributable_id => @user.id, 
+    cav = CustomAttributeValue.new(:attributable_id => @user.id,
                                    :attributable_type => "User",
                                    :custom_attribute_id => @attr.id)
     cav.value = "1234"
@@ -32,7 +32,7 @@ class CustomAttributeValueTest < ActiveRecord::TestCase
     @attr.mandatory = true
     @attr.save
 
-    cav = CustomAttributeValue.new(:attributable_id => @user.id, 
+    cav = CustomAttributeValue.new(:attributable_id => @user.id,
                                    :attributable_type => "User",
                                    :custom_attribute_id => @attr.id)
 
